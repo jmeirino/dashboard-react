@@ -1,10 +1,11 @@
 import React from 'react';
 import AppRouter from '../routes/AppRouter';
+import Image from '../public/logo2.png';
 
 const MainApp = () => {
     return (
         <section className='container'>
-            <h1>Dashboard Dragon Tech</h1>
+            <img className='imagen logo' src={require('../public/logo2.png')}/>
         <hr/>    
 
         <AppRouter/>

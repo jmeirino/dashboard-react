@@ -1,34 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+import React from 'react';
+import UsersList from '../components/UsersList';
+import { usuarios } from "../data/usuarios";
 
-const TotalUsuarios = (props) => {
-    const [users, setUsers] = useState([])
-
-    useEffect(() => {
-        axios.get("http://localhost:3000/api/users")
-            .then(res => {
-                // console.log("datos");
-                console.log(res.data.count); 
-                setUsers(res.data.users)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }, [])
-
-
+const TotalUsuarios = () => {
+       
     return (
-        <>
-            <hr />
-            <div className="card text-white bg-danger mb-3">
-                <div className="card-header bg-dark text-uppercase font-weight-bold">Total de Usuarios</div>
+        <section>
+        <hr/>
+        <div className="card text-white bg-primary mb-3">
+                <div className="card-header bg-dark text-uppercase font-weight-bold">Total de Usuarios    { usuarios.length } </div>
                 <div className="card-body">
                     <h5 className="card-title">Listado de Usuarios activos</h5>
                 </div>
-            </div>
-            <div className="col-auto">
-            </div>
-        </>
+        </div>
+        <div className="col-auto">
+        </div>
+
+        <UsersList usuarios = {usuarios}/>
+            
+        </section>        
     );
 };
 
