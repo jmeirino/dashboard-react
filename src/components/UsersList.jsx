@@ -1,8 +1,6 @@
 import React from 'react';
 import getUsersByName from '../helpers/getUsersByName';
 
-
-
 const UsersList = ( { usuarios }) => {
 
     return (
