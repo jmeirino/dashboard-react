@@ -2,32 +2,44 @@ import React, { useEffect, useState } from 'react';
 import getUsersByName from '../helpers/getUsersByName';
 
 const UsersList = () => {
-    const [usuarios, setUsuarios] = useState(null);
 
-    useEffect(() => {
-        getUsersByName(setUsuarios)
-    }, [])
+  const [usuarios, setUsuarios] = useState(null);
 
-    return (
-<div>
-    <ul>
-       
-    {usuarios != null ? (
+  useEffect(() => {
 
-      usuarios.map(usuario => (
-        <div key={usuario.id}>
+    getUsersByName(setUsuarios)
 
-          <li> {usuario.id} - {usuario.name} - {usuario.email} </li>
+  }, [])
+
+  return (
+    <div>
+
+      
+
+      {usuarios != null ? (
+
+        usuarios.map(usuario => (
+          <div key={usuario.id}>
+            <li> {usuario.id} - {usuario.name} - {usuario.email} </li>
+          </div>
+        ))
+
+      ) : ("no hay usuarios")}
+
+      <br></br>
+      {usuarios != null ? (
+        <h4>Total de usuarios: {usuarios.length}</h4>
+      ) : ("0")}
           
-        </div>
-      ))
-    ) : ("no hay personajes")}
-    </ul>
+    
 
-    <p>Total de usuarios {usuarios.length}</p>
+
+
+
+
 
     </div>
-    );
+  );
 };
 
 export default UsersList;

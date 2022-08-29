@@ -1,14 +1,9 @@
-import { productos } from "../data/productos";
+import axios from 'axios'; 
 
-const getProductsByCategoria = (categoria) =>{
-
-    const validCategoria = ["Headseat", "Mouse", "Teclado"];
-
-    if (!validCategoria.includes(categoria)) {
-        throw new Error(`Categoria inválida: ${categoria}`);
-    }
-
-    return productos.filter ((producto) => producto.categoria === categoria);
+const getProductsByCategoria = async (state) =>{
+    const peticion = await axios.get ('https://dragontech5.herokuapp.com/api/products')
+        state(peticion.data.products);
+    
 }
 
 export default getProductsByCategoria

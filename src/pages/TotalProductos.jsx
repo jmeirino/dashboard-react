@@ -10,7 +10,7 @@ const TotalProductos = () => {
         <section>
         <hr/>
         <div className="card text-white bg-danger mb-3">
-                <div className="card-header bg-dark text-uppercase font-weight-bold">Total de Productos     { productos.length } </div>
+                <div className="card-header bg-dark text-uppercase font-weight-bold">Productos  </div>
                 <div className="card-body">
                     <h5 className="card-title">Listado de Productos a la venta</h5>
                  
