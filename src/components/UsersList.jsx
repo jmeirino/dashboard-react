@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import getUsersByName from '../helpers/getUsersByName';
 
-const UsersList = ( { usuarios }) => {
+const UsersList = () => {
+    const [usuarios, setUsuarios] = useState(null);
+
+    useEffect(() => {
+        getUsersByName(setUsuarios)
+    }, [])
 
     return (
-        <ul>
-            {
-            usuarios.map(usuario => {
-                return (
-                <li key={usuario.id}>
-                {usuario.name}
-                </li>
-            )}
-            )
-            }        
-        </ul>
-        );
+<div>
+    <ul>
+       
+    {usuarios != null ? (
+
+      usuarios.map(usuario => (
+        <div key={usuario.id}>
+
+          <li> {usuario.id} - {usuario.name} - {usuario.email} </li>
+          
+        </div>
+      ))
+    ) : ("no hay personajes")}
+    </ul>
+
+    <p>Total de usuarios {usuarios.length}</p>
+
+    </div>
+    );
 };
 
 export default UsersList;
