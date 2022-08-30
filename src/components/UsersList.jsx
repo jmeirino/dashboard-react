@@ -12,10 +12,7 @@ const UsersList = () => {
   }, [])
 
   return (
-    <div>
-
-      
-
+    <>
       {usuarios != null ? (
 
         usuarios.map(usuario => (
@@ -30,15 +27,8 @@ const UsersList = () => {
       {usuarios != null ? (
         <h4>Total de usuarios: {usuarios.length}</h4>
       ) : ("0")}
-          
-    
 
-
-
-
-
-
-    </div>
+    </>
   );
 };
 

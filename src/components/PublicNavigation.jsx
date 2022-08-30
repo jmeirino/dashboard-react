@@ -2,56 +2,22 @@ import { Link } from "react-router-dom";
 
 const PublicNavigation = () => {
   return (
-    <div className="main-div-sidebar">
-      <div className="barra" >
-        <ul className="navbar-nav sidebar h-100" id="accordionSidebar">
+    <>
+      <nav className="nav nav-pills flex-column flex-sm-row">
+        <img className="logo" src="/logo.png" alt="" />
 
-          <hr className="sidebar-divider my-2" />
+        <Link className="barraLink" to="/inicio">HOME</Link>
 
-          <li className="nav-item active">
-            <p className="" href="/">
+        <Link className="barraLink" to="/productos">PRODUCTOS</Link>
 
-              <img className="logo" src="/logo.png" alt="" />
+        <Link className="barraLink" to="/categorias">CATEGORÍAS</Link>
 
-            </p>
-          </li>
-
-          <hr className="sidebar-divider" />
-
-          <li className="nav-item">
-            <p className="item-sidebar" href="/">
-              <Link className="linkIcono" to="/inicio"><i className="fa-solid fa-house"></i></Link>
-              <Link className="barraLink" to="/inicio">HOME</Link>
-            </p>
-          </li>
+        <Link className="barraLink" to="/usuarios">USUARIOS</Link>
+      </nav>
 
 
-          <li className="nav-item">
-            <p className="item-sidebar" href="/">
-              <Link className="linkIcono" to="/productos"><i className="fa-solid fa-headset"></i></Link>
-              <Link className="barraLink" to="/productos">PRODUCTOS</Link>
-            </p>
-          </li>
 
-          <li className="nav-item">
-            <p className="item-sidebar" href="/">
-              <Link className="linkIcono" to="/categorias"><i className="fa-solid fa-user"></i></Link>
-              <Link className="barraLink" to="/categorias">CATEGORÍAS</Link>
-            </p>
-          </li>
-
-          <li className="nav-item">
-            <p className="item-sidebar" href="/">
-              <Link className="linkIcono" to="/usuarios"><i className="fa-solid fa-user"></i></Link>
-              <Link className="barraLink" to="/usuarios">USUARIOS</Link>
-            </p>
-          </li>
-
-
-          <hr className="sidebar-divider d-none d-md-block" />
-        </ul></div>
-    </div>
-
+    </>
 
     //<div className="navbar-nav">
     //<NavLink className="nav-link" to="productos">Total de Productos</NavLink>

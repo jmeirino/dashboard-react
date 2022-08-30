@@ -2,26 +2,21 @@ import React from 'react';
 import ProductList from '../components/ProductList';
 import { productos } from "../data/productos";
 
-
-
 const TotalProductos = () => {
-       
+
     return (
         <section>
-        <hr/>
-        <div className="card text-white bg-danger mb-3">
-                <div className="card-header bg-dark text-uppercase font-weight-bold">Productos  </div>
-                <div className="card-body">
-                    <h5 className="card-title">Listado de Productos a la venta</h5>
-                 
-                </div>
-        </div>
-        <div className="col-auto">
-        </div>
+            <hr />
+            <div className="card-header bg-danger text-uppercase font-weight-bold">Listado de Productos a la venta</div>
+            <div className="card-body">
+            </div>
+            <div className="col-auto">
+            </div>
+            <hr/>
 
-        <ProductList productos = {productos}/>
-            
-        </section>        
+            <ProductList productos={productos} />
+
+        </section>
     );
 };
 
