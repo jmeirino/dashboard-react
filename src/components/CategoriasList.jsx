@@ -1,11 +1,9 @@
 import React from 'react';
-import getCategoriasByCategoria from '../helpers/getCategoriasByCategoria';
-
-
 
 const CategoriasList = ( { categorias }) => {
 
     return (
+        <div>
         <ul>
             {
             categorias.map(categoria => {
@@ -17,6 +15,15 @@ const CategoriasList = ( { categorias }) => {
             )
             }        
         </ul>
+      <br></br>
+
+      {categorias != null ? (
+
+        <h4>Total de Categorías: {categorias.length}</h4>
+        
+
+      ) : ("0")}
+</div>
         );
 };
 
