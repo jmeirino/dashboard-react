@@ -13,14 +13,11 @@ const ProductList = () => {
 
   return (
     <div>
-
-
-
       {productos != null ? (
-
         productos.map(producto => (
           <div key={producto.id}>
-            <li> {producto.id} - {producto.name}  </li>
+            <li>{producto.name} </li>
+        <img src={producto.img_url} alt=""></img>
           </div>
         ))
 

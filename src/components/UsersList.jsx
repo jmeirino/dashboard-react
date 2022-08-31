@@ -18,7 +18,8 @@ const UsersList = () => {
         usuarios.map(usuario => (
           <div key={usuario.id}>
             
-            <li> {usuario.id} - {usuario.name} - {usuario.email} </li>
+            <li>{usuario.name} - {usuario.email} </li>
+            <img src={usuario.img_url} alt=""></img>
           </div>
         ))
 

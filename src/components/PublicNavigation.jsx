@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const PublicNavigation = () => {
@@ -7,13 +7,13 @@ const PublicNavigation = () => {
       <nav className="nav nav-pills flex-column flex-sm-row">
         <img className="logo" src="/logo.png" alt="" />
 
-        <Link className="barraLink" to="/inicio">HOME</Link>
+        <NavLink className="barraLink" to="/inicio"> <i className="bi bi-house"></i> HOME</NavLink>
 
-        <Link className="barraLink" to="/productos">PRODUCTOS</Link>
+        <NavLink className="barraLink" to="/productos"> <i className="bi bi-headset"></i> PRODUCTOS</NavLink>
 
-        <Link className="barraLink" to="/categorias">CATEGORÍAS</Link>
+        <NavLink className="barraLink" to="/categorias"> <i className="bi bi-mouse"></i> CATEGORÍAS</NavLink>
 
-        <Link className="barraLink" to="/usuarios">USUARIOS</Link>
+        <NavLink className="barraLink" to="/usuarios"> <i className="bi bi-emoji-smile"></i> USUARIOS</NavLink>
       </nav>
 
 
