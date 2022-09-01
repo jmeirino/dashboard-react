@@ -12,7 +12,7 @@ const TotalDeProductos = () => {
   }, [])
 
   return (
-    <div>
+    <div className='top-card-home'>
       {productos != null ? (
 
         <h4 className='card-home'> Total de Productos: {productos.length}</h4>

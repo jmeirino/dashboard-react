@@ -12,7 +12,7 @@ const TotalDeCategorias = () => {
   }, [])
 
   return (
-    <div>
+    <div className='top-card-home'>
       {Categorias != null ? (
 
         <h4 className='card-home'> Total de Categorias: {Categorias.length}</h4>

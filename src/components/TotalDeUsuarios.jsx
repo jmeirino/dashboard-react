@@ -12,7 +12,7 @@ const TotalDeUsuarios = () => {
     }, [])
 
     return (
-        <div>
+        <div className='top-card-home'>
             {usuarios != null ? (
                 <h4 className='card-home'> Total de Usuarios: {usuarios.length}</h4>
             ) : ("0")}
