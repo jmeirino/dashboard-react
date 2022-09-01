@@ -15,7 +15,7 @@ const TotalDeProductos = () => {
     <div>
       {productos != null ? (
 
-        <h4 className='card-home'> Total de productos: {productos.length}</h4>
+        <h4 className='card-home'> Total de Productos: {productos.length}</h4>
 
       ) : ("0")}
 

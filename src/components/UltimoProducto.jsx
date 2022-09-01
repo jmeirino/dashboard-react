@@ -1,27 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import getProductsByCategoria from '../helpers/getProductsByCategoria';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 const UltimoProducto = () => {
+   
+ const [ultimoProducto, setUltimoProducto]=useState() 
 
-  const [productos, setProductos] = useState(null);
-
-  useEffect(() => {
-
-    getProductsByCategoria(setProductos)
-
-  }, [])
+    useEffect(() => {
+        axios.get("https://dragontech5.herokuapp.com/api/products/")
+            .then(res => {
+                setUltimoProducto(res.data.products.pop());
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }, [])
 
   return (
-    <div>
-      {productos != null ? (
+    <>
+        {ultimoProducto != null ? (
+           <article className='ultimoProduct-card'>
+           <div className="ultimoProduct-name">Último Producto Creado</div>
+           <div key={ultimoProducto.id}>
+             <li className='product-name'> {ultimoProducto.name}</li>
+             <img className='product-img' src={ultimoProducto.img_url} alt=""></img>
 
-        <h4 className='card-home'> Total de productos: {productos.pop()}</h4>
-
-      ) : ("0")}
-
-    </div>
-  );
-};
-
+           </div>
+         </article>
+          )
+  
+         : ("no hay productos")}
+    </>
+              );
+  
+              }
 
 export default UltimoProducto;

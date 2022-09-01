@@ -1,6 +1,10 @@
 import React from 'react';
+import TotalDeCategorias from '../components/TotalDeCategorias';
 import TotalDeProductos from '../components/TotalDeProductos';
 import TotalDeUsuarios from '../components/TotalDeUsuarios';
+import UltimoProducto from '../components/UltimoProducto';
+import UltimoUsuario from '../components/UltimoUsuario';
+
 
 
 
@@ -10,6 +14,9 @@ const HomePage = () => {
         <div className='upper-container'>
           <TotalDeProductos/>
           <TotalDeUsuarios/>
+          <TotalDeCategorias/>
+          <UltimoProducto/>
+          <UltimoUsuario/>
 
         </div>
   

@@ -12,7 +12,7 @@ const ProductList = () => {
   }, [])
 
   return (
-    <div>
+    <>
       {productos != null ? (
         productos.map(producto => (
           <article className='product-card'>
@@ -38,7 +38,7 @@ const ProductList = () => {
 
 
 
-    </div>
+    </>
   );
 };
 

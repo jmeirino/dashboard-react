@@ -2,29 +2,24 @@ import React from 'react';
 
 const CategoriasList = ( { categorias }) => {
 
-    return (
-        <div>
-        <ul>
-            {
-            categorias.map(categoria => {
-                return (
-                <li key={categoria.id}>
-                {categoria.name}
-                </li>
-            )}
-            )
-            }        
-        </ul>
-      <br></br>
-
+    return ( 
+      <>
       {categorias != null ? (
-
-        <h4>Total de Categorías: {categorias.length}</h4>
-        
-
-      ) : ("0")}
-</div>
-        );
+        <div>
+          <ul>
+              {
+                categorias.map(categoria => {
+                  return (<li key={categoria.count}>{categoria.name}: {categoria.count}</li>)
+                })
+              }        
+          </ul>
+          <br></br>
+          <h4>Total de Categorías: {categorias.length}</h4>
+          </div>
+        ) : ("0") 
+      }
+      </>
+    );
 };
 
 export default CategoriasList;

@@ -1,8 +1,21 @@
-import React from 'react';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import CategoriasList from '../components/CategoriasList';
-import { categorias } from "../data/categorias";
 
 const TotalCategorias = () => {
+   
+    const [totalCategorias, setTotalCategorias]=useState() 
+   
+       useEffect(() => {
+           axios.get("https://dragontech5.herokuapp.com/api/products/")
+               .then(res => {
+                setTotalCategorias(res.data.countByCategory);
+               })
+               .catch(error => {
+                   console.log(error)
+               })
+       }, [])
+
 
     return (
         <section>
@@ -14,7 +27,7 @@ const TotalCategorias = () => {
             </div>
             <hr />
 
-            <CategoriasList categorias={categorias} />
+            <CategoriasList categorias={totalCategorias} />
 
         </section>
     );
