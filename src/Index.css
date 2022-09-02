@@ -126,6 +126,21 @@ body {
     text-align: center;
   }
 
+  .card-categorias {
+    width: 25%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 65px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    align-items: center;
+    border: 1px solid;
+    border-color: blueviolet;
+    border-radius: 5px;
+   
+  }
+
   .top-card-home {
     display: inline-flex;
     flex-direction: column;

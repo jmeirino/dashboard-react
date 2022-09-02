@@ -9,7 +9,11 @@ const CategoriasList = ( { categorias }) => {
           <ul>
               {
                 categorias.map(categoria => {
-                  return (<li key={categoria.count}>{categoria.name}: {categoria.count}</li>)
+                  return (
+                  <li className='card-categorias' key={categoria.count}>{categoria.name}: {categoria.count}</li>
+                  
+                  )
+                  
                 })
               }        
           </ul>

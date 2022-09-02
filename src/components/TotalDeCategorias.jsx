@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import getProductsByCategoria from '../helpers/getProductsByCategoria';
+import getCategoriasByCategoria from '../helpers/getCategoriasByCategoria';
+
 
 const TotalDeCategorias = () => {
 
@@ -7,7 +8,7 @@ const TotalDeCategorias = () => {
 
   useEffect(() => {
 
-    getProductsByCategoria(setCategorias)
+    getCategoriasByCategoria(setCategorias)
 
   }, [])
 

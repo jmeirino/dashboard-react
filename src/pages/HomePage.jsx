@@ -6,8 +6,6 @@ import UltimoProducto from '../components/UltimoProducto';
 import UltimoUsuario from '../components/UltimoUsuario';
 
 
-
-
 const HomePage = () => {
     return (
         <div className='main-home-container'>
